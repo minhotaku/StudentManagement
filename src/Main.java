@@ -59,7 +59,8 @@ public class Main {
 
         boolean found = false;
 
-        for (Student student : studentList) {
+        for (int i = 0; i < studentList.size(); i++) {
+            Student student = studentList.get(i);
             if (student.getLastName().equalsIgnoreCase(lastName)) {
                 System.out.println(student);
                 found = true;
