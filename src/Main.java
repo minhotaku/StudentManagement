@@ -31,10 +31,10 @@ public class Main {
                     break;
                 case 4:
                     running = false;
-                    System.out.println("Program ended.");
+                    System.out.println("Program terminated.");
                     break;
                 default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 4.");
+                    System.out.println("Not a valid option. A number between 1 and 4 please..");
             }
         }while (running);
     }
@@ -76,8 +76,10 @@ public class Main {
         System.out.print("Enter full name to search for: ");
         String fullName = scanner.nextLine();
 
-        for (Student student : studentList) {
+        for (int i = 0; i < studentList.size(); i++) {
+            Student student = studentList.get(i);
             if (student.toString().equalsIgnoreCase(fullName)) {
+
                 System.out.println("Student found: " + student);
                 System.out.print("Enter new first name: ");
                 String newFirstName = scanner.nextLine();
@@ -94,7 +96,7 @@ public class Main {
         }
 
         if (!found) {
-            System.out.println("No students found with the name '" + fullName + "'.");
+            System.out.println("No students found with the name : " + fullName );
         }
     }
 }
