@@ -44,11 +44,12 @@ public class Main {
         int numStudents = scanner.nextInt();
         scanner.nextLine();
         for (int i = 1; i <= numStudents; i++) {
-            System.out.print("Enter first name of student " + i + " : ");
+            System.out.printf("Enter first name of student %d : ", i);
             String firstName = scanner.nextLine();
-            System.out.print("Enter last name of student  " + i + " : ");
+            System.out.printf("Enter last name of student %d : ", i);
             String lastName = scanner.nextLine();
-            studentList.add(new Student(firstName, lastName));
+            Student newStudent = new Student(firstName, lastName);
+            studentList.add(newStudent);
         }
     }
 
